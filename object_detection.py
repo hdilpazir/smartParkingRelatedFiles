@@ -25,7 +25,7 @@ class ObjectDetection:
 
         self.model.setInputParams(size=(self.image_size, self.image_size), scale=1/255)
 
-    def load_class_names(self, classes_path="/content/smartParkingRelatedFiles/carParkPos_ALL/classes.txt"):
+    def load_class_names(self, classes_path="/content/smartParkingRelatedFiles/classes.txt"):
 
         with open(classes_path, "r") as file_object:
             for class_name in file_object.readlines():
