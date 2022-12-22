@@ -4,7 +4,7 @@ import numpy as np
 
 class ObjectDetection:
 #    def __init__(self, weights_path="C:\\Users\\USER\\PycharmProjects\\pythonProject\\smartParkingv1\\yolov4.weights", cfg_path="C:\\Users\\USER\\PycharmProjects\\pythonProject\\smartParkingv1\\yolov4.cfg"):
-    def __init__(self, weights_path="C:\\Users\\USER\\PycharmProjects\\pythonProject\\smartParkingv1\\yolov4-tiny.weights", cfg_path="C:\\Users\\USER\\PycharmProjects\\pythonProject\\smartParkingv1\\yolov4-tiny.cfg"):
+    def __init__(self, weights_path="/content/smartParkingRelatedFiles/yolov4.weights", cfg_path="/content/smartParkingRelatedFiles/yolov4.cfg"):
         print("Loading Object Detection")
         print("Running opencv dnn with YOLOv4")
         self.nmsThreshold = 0.4
@@ -25,7 +25,7 @@ class ObjectDetection:
 
         self.model.setInputParams(size=(self.image_size, self.image_size), scale=1/255)
 
-    def load_class_names(self, classes_path="C:\\Users\\USER\\PycharmProjects\\pythonProject\\smartParkingv1\\classes.txt"):
+    def load_class_names(self, classes_path="/content/smartParkingRelatedFiles/carParkPos_ALL/classes.txt"):
 
         with open(classes_path, "r") as file_object:
             for class_name in file_object.readlines():
